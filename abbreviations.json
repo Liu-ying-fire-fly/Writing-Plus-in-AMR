@@ -1,0 +1,10 @@
+{
+  "acc": "Accuracy",
+  "cnn": "Convolutional Neural Network",
+  "rnn": "Recurrent Neural Network",
+  "lstm": "Long Short-Term Memory",
+  "amr": "Automatic Modulation Recognition",
+  "amc": "Automatic Modulation Classification",
+  "snr": "Signal-to-Noise Ratio",
+  "relu": "Rectified Linear Unit"
+}

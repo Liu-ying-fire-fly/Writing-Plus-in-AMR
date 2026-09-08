@@ -1,0 +1,27 @@
+# LangChain
+langchain
+langchain-community
+langchain-core
+langchain-deepseek
+langchain-openai
+langchain-huggingface
+langchain-text-splitters
+
+# 向量库
+faiss-cpu
+
+# 嵌入 & 重排
+sentence-transformers
+transformers
+torch
+numpy
+
+# 图数据库
+neo4j
+
+# 模型下载
+modelscope
+
+# 其他
+python-dotenv
+pydantic>=2

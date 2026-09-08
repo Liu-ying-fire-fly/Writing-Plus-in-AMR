@@ -1,0 +1,69 @@
+{
+  "chunking": {
+    "chunk_size": 1500,
+    "chunk_overlap": 300,
+    "headers_to_split_on": [
+      ["#", "Header 1"],
+      ["##", "Header 2"],
+      ["###", "Header 3"],
+      ["####", "Header 4"]
+    ]
+  },
+  "paths": {
+    "data_dir": "markdown_data",
+    "cache_path": "extraction_cache.json",
+    "faiss_index": "paper_vertical",
+    "manifest": "indexed_files.json",
+    "abbreviations": "abbreviations.json"
+  },
+  "embedding": {
+    "model_path": "model/Qwen3-Embedding-0.6B-modelscope",
+    "device": "cuda",
+    "max_length": 2048,
+    "batch_size": 16
+  },
+  "deepseek": {
+    "model": "deepseek-v4.1-flash-expires-on-0910",
+    "base_url": "https://api.deepseek.com"
+  },
+  "extraction": {
+    "temperature": 0.0,
+    "max_tokens": 16384,
+    "max_workers": 8,
+    "schema_version": 2
+  },
+  "reranker": {
+    "model": "BAAI/bge-reranker-v2-m3",
+    "max_length": 512
+  },
+  "refine": {
+    "compression_temperature": 0.0,
+    "compression_max_tokens": 2048,
+    "generation_temperature": 0.7,
+    "generation_max_tokens": 8192,
+    "max_workers": 4,
+    "top_n": 10
+  },
+  "retrieval": {
+    "semantic_rel_types": [
+      "USES", "TARGETS", "ADDRESSES",
+      "EVALUATED_ON", "REPORTED", "APPLIES_TO", "INVOLVES",
+      "OF_METRIC", "ON_DATASET"
+    ],
+    "k": 5,
+    "hops": 2,
+    "max_expanded_entities": 40,
+    "max_expanded_chunks": 20,
+    "max_chunks_per_entity": 3
+  },
+  "rag_demo": {
+    "temperature": 0.7,
+    "max_tokens": 4096
+  },
+  "hf_endpoint": "https://hf-mirror.com",
+  "neo4j": {
+    "uri": "bolt://localhost:7687",
+    "user": "neo4j",
+    "database": "neo4j"
+  }
+}
